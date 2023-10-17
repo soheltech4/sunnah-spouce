@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaSistrix } from "react-icons/fa";
+import { FaSistrix, FaUser, FaUserCircle } from "react-icons/fa";
+
 const Navbar = () => {
 
     const Nav =
@@ -13,8 +14,8 @@ const Navbar = () => {
         </>
 
     return (
-        <div>
-            <div className="navbar bg-base-100">
+        <div className=''>
+            <div className="fixed rounded-b-2xl bg-gray-300 bg-opacity-80 z-10 navbar">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -62,9 +63,9 @@ const Navbar = () => {
                             </div>
                         </div>
                         <div className="dropdown dropdown-end">
-                            <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-                                <div className="w-10 rounded-full">
-                                    <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                            <label tabIndex={0} className="btn btn-ghost btn-circle ">
+                                <div className="rounded-full">
+                                    <p className='flex justify-center items-center' href=""><FaUserCircle className='text-4xl hover:text-purple-700'></FaUserCircle></p>
                                 </div>
                             </label>
                             <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
