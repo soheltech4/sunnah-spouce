@@ -6,16 +6,16 @@ const Navbar = () => {
 
     const Nav =
         <>
-            <Link to="/" className={`px-3 hover:bg-white hover:text-black rounded hover:duration-1000 ${location.pathname === '/' ? 'active-link font-bold underline text-black' : ''}`}>Home</Link>
-            <Link to="/" className={`px-3 hover:bg-white hover:text-black rounded hover:duration-1000 ${location.pathname === '/shop' ? 'active-link text-black' : ''}`}>All Class</Link>
-            <Link to="/" className={`px-3 hover:bg-white hover:text-black rounded hover:duration-1000 ${location.pathname === '/blogs' ? 'active-link text-black' : ''}`}>Blogs</Link>
-            <Link to="/" className={`px-3 hover:bg-white hover:text-black rounded hover:duration-1000 ${location.pathname === '/about' ? 'active-link text-black' : ''}`}>About Us</Link>
-            <Link to="/" className={`px-3 hover:bg-white hover:text-black rounded hover:duration-1000 ${location.pathname === '/contact' ? 'active-link text-black' : ''}`}>Contact</Link>
+            <Link to="/" className={`px-3 hover:font-bold hover:underline hover:duration-5000 ${location.pathname === '/' ? 'active-link font-bold underline text-black' : ''}`}>Home</Link>
+            <Link to="/" className={`px-3 hover:font-bold hover:underline hover:duration-5000 ${location.pathname === '/about' ? 'active-link font-bold underline text-black' : ''}`}>About Us</Link>
+            <Link to="/" className={`px-3 hover:font-bold hover:underline hover:duration-5000 ${location.pathname === '/allclass' ? 'active-link font-bold underline text-black' : ''}`}>All Class</Link>
+            <Link to="/" className={`px-3 hover:font-bold hover:underline hover:duration-5000 ${location.pathname === '/blogs' ? 'active-link font-bold underline text-black' : ''}`}>Blogs</Link>
+            <Link to="/" className={`px-3 hover:font-bold hover:underline hover:duration-5000 ${location.pathname === '/contact' ? 'active-link font-bold underline text-black' : ''}`}>Contact</Link>
         </>
 
     return (
         <div className=''>
-            <div className="fixed rounded-b-2xl bg-gray-300 bg-opacity-80 z-10 navbar">
+            <div className="fixed rounded-b-2xl bg-gray-100 bg-opacity-80 z-10 navbar">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
