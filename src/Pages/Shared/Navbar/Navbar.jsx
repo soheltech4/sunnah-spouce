@@ -65,7 +65,7 @@ const Navbar = () => {
                         <div className="dropdown dropdown-end">
                             <label tabIndex={0} className="btn btn-ghost btn-circle ">
                                 <div className="rounded-full">
-                                    <p className='flex justify-center items-center' href=""><FaUserCircle className='text-4xl hover:text-purple-700'></FaUserCircle></p>
+                                    <Link to="/login"><p className='flex justify-center items-center' href=""><FaUserCircle className='text-4xl hover:text-purple-700'></FaUserCircle></p></Link>
                                 </div>
                             </label>
                             <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">

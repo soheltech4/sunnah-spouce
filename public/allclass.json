@@ -1,0 +1,28 @@
+[
+    {
+      "Title": "Spanish for Beginners",
+      "Instructor": {
+        "Name": "Maria Rodriguez",
+        "Image": "maria_rodriguez.jpg"
+      },
+      "Enroll": 1200,
+      "Thumbnail": "spanish_for_beginners.jpg",
+      "Gallery": ["lesson1.jpg", "lesson2.jpg", "lesson3.jpg"],
+      "Seat": 1500,
+      "Description": "Learn the fundamentals of the Spanish language with this comprehensive beginner's course. You'll build a strong foundation in speaking, reading, and writing Spanish.",
+      "Reviews": [
+        {
+          "Name": "John Smith",
+          "Image": "john_smith.jpg",
+          "Rating": 4.5,
+          "Comment": "Excellent course! Maria is a fantastic teacher, and I learned a lot."
+        },
+        {
+          "Name": "Emma Johnson",
+          "Image": "emma_johnson.jpg",
+          "Rating": 4.0,
+          "Comment": "I enjoyed this course and improved my Spanish skills significantly."
+        }
+      ]
+    }
+  ]
