@@ -5,14 +5,14 @@ import SocialLogin from '../Social Login/SocialLogin';
 const Login = () => {
 
     return (
-        <div className='md:flex bg-purple-50 w-full justify-center items-center pt-20 '>
+        <div className='md:flex bg-purple-50 pb-20 w-full justify-center items-center pt-20 '>
             <div className='md:w-1/3 text-center '>
-                <img src="https://i.ibb.co/VjMP2wM/logo2.png" className='w-66' alt="" />
-                <a><Link className='underline text-purple-600' to={"/signup"}>Sign Up</Link> If you don't have an account</a>
+                <img src="https://i.ibb.co/VjMP2wM/logo2.png" className='w-66 fiexed' alt="" />
+                <a><Link className='underline text-purple-600 text-lg' to={"/signup"}>Sign Up</Link> If you don't have an account</a>
             </div>
             <div className='m-10 p-5 md:w-1/4 rounded-lg'>
                 <div>
-                    <SocialLogin></SocialLogin>
+                    <SocialLogin title="in"></SocialLogin>
                     <div className="divider text-black">OR</div>
                     <form>
                         <div className="form-control pb-5">
