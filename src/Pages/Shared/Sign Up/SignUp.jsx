@@ -1,8 +1,25 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import SocialLogin from '../Social Login/SocialLogin';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../../Provider/AuthProvider';
 
 const SignUp = () => {
+
+const {auth, createUser} = useContext(AuthContext)
+
+const handleSignup = event =>{
+    event.preventDefault()
+    const form = event.target
+    const name = form.name.value
+    const email = form.email.value
+    const password = form.password.value
+    createUser(auth, email, password)
+    .then (result =>{
+        const loggedUser = result.user
+        console.log(loggedUser)
+    })   
+}
+
     return (
         <div className='md:flex bg-purple-50 w-full justify-center items-center pt-20'>
             <div className='md:w-1/3 text-center '>
@@ -12,7 +29,7 @@ const SignUp = () => {
                 <div>
                     <SocialLogin title="up"></SocialLogin>
                     <div className="divider text-black">OR</div>
-                    <form>
+                    <form onSubmit={handleSignup}>
                         <div className="form-control pb-5">
                             <input type="text" name='name' placeholder="Your Name" className="shadow-lg input w-full" required />
                         </div>
@@ -20,7 +37,7 @@ const SignUp = () => {
                             <input type="email" name='email' placeholder="Email" className="shadow-lg input w-full" required />
                         </div>
                         <div className="form-control pb-5 grid grid-cols-2 gap-x-5">
-                            <input type="file" className="file-input  file-input-bordered w-full max-w-xs" />
+                            <input type="file" photo="file" className="file-input  file-input-bordered w-full max-w-xs" />
                             <input type="password" name='password' placeholder="password" className="shadow-lg input w-full" required />
                         </div>
                         <div className="form-control mt-6 ">
