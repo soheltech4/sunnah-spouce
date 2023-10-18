@@ -1,11 +1,17 @@
 import React, { useContext } from 'react';
 import SocialLogin from '../Social Login/SocialLogin';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../Provider/AuthProvider';
+import { ToastContainer, toast } from 'react-toastify';
 
 const SignUp = () => {
-
 const {auth, createUser} = useContext(AuthContext)
+
+const navigate = useNavigate()
+const location = useLocation()
+
+const from = location.state?.from?.pathname || "/"
+
 
 const handleSignup = event =>{
     event.preventDefault()
@@ -17,6 +23,20 @@ const handleSignup = event =>{
     .then (result =>{
         const loggedUser = result.user
         console.log(loggedUser)
+        toast.success('Signup Successfully!', {
+            position: 'top-center',
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: 'light',
+        });
+        navigate(from, {replace: true})
+        form.name.value = "",
+        form.email.value = ""
+        form.password.value = ""
     })   
 }
 
@@ -47,6 +67,7 @@ const handleSignup = event =>{
                 </div>
                 <a className='flex justify-center items-center gap-x-2 mt-5' ><Link className='underline text-purple-600 text-lg' to={"/login"}>Login</Link> If you have an account</a>
             </div>
+            <ToastContainer/>
         </div>
     );
 };
