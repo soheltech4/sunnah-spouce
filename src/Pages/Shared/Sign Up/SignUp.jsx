@@ -7,7 +7,6 @@ const SignUp = () => {
         <div className='md:flex bg-purple-50 w-full justify-center items-center pt-20'>
             <div className='md:w-1/3 text-center '>
                 <img src="https://i.ibb.co/VjMP2wM/logo2.png" className='w-66 fiexed' alt="" />
-                <a><Link className='underline text-purple-600 text-lg' to={"/login"}>Login</Link> If you have an account</a>
             </div>
             <div className='m-10 p-5 md:w-1/4 rounded-lg'>
                 <div>
@@ -29,6 +28,7 @@ const SignUp = () => {
                         </div>
                     </form>
                 </div>
+                <a className='flex justify-center items-center gap-x-2 mt-5' ><Link className='underline text-purple-600 text-lg' to={"/login"}>Login</Link> If you have an account</a>
             </div>
         </div>
     );
