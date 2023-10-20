@@ -1,28 +1,242 @@
 [
-    {
-      "Title": "Spanish for Beginners",
-      "Instructor": {
-        "Name": "Maria Rodriguez",
-        "Image": "maria_rodriguez.jpg"
+  {
+    "Title": "French for Beginners",
+    "InstructorName": "Sophie Dupont",
+    "InstructorPhoto": "sophie_dupont.jpg",
+    "Enroll": 80,
+    "Seat": 100,
+    "Thumbnail": "https://i.ibb.co/Xpg3wwG/German.jpg",
+    "Description": "A comprehensive beginner's course to start your journey into the French language.",
+    "Rating" : 4.5,
+    "Reviews": [
+      {
+        "Name": "John Smith",
+        "Image": "john_smith.jpg",
+        "Rating": 4.5,
+        "Comment": "Sophie is an excellent teacher, and I've made significant progress in French."
       },
-      "Enroll": 1200,
-      "Thumbnail": "spanish_for_beginners.jpg",
-      "Gallery": ["lesson1.jpg", "lesson2.jpg", "lesson3.jpg"],
-      "Seat": 1500,
-      "Description": "Learn the fundamentals of the Spanish language with this comprehensive beginner's course. You'll build a strong foundation in speaking, reading, and writing Spanish.",
-      "Reviews": [
-        {
-          "Name": "John Smith",
-          "Image": "john_smith.jpg",
-          "Rating": 4.5,
-          "Comment": "Excellent course! Maria is a fantastic teacher, and I learned a lot."
-        },
-        {
-          "Name": "Emma Johnson",
-          "Image": "emma_johnson.jpg",
-          "Rating": 4.0,
-          "Comment": "I enjoyed this course and improved my Spanish skills significantly."
-        }
-      ]
-    }
-  ]
+      {
+        "Name": "Emma Johnson",
+        "Image": "emma_johnson.jpg",
+        "Rating": 4.2,
+        "Comment": "This course is great for anyone looking to learn French from scratch."
+      }
+    ]
+  },
+  {
+    "Title": "Spanish Mastery",
+    "InstructorName": "Carlos Hernandez",
+    "InstructorPhoto": "carlos_hernandez.jpg",
+    "Enroll": 95,
+    "Seat": 120,
+    "Thumbnail": "https://i.ibb.co/wMcqdSQ/Italian.jpg",
+    "Description": "Immerse yourself in Spanish conversation and become a confident Spanish speaker.",
+    "Rating" : 4.0,
+    "Reviews": [
+      {
+        "Name": "Maria Rodriguez",
+        "Image": "maria_rodriguez.jpg",
+        "Rating": 4.7,
+        "Comment": "Carlos is an engaging instructor, and I now speak Spanish fluently."
+      },
+      {
+        "Name": "David Lee",
+        "Image": "david_lee.jpg",
+        "Rating": 4.4,
+        "Comment": "This course transformed my ability to have Spanish conversations."
+      }
+    ]
+  },
+  {
+    "Title": "Mandarin Chinese Culture",
+    "InstructorName": "Li Wei",
+    "InstructorPhoto": "li_wei.jpg",
+    "Enroll": 70,
+    "Seat": 80,
+    "Thumbnail": "https://i.ibb.co/1fXTLmK/chiense.jpg",
+    "Description": "Explore the art of Chinese calligraphy and dive into Chinese culture.",
+    "Rating" : 4.2,
+    "Reviews": [
+      {
+        "Name": "Liu Ming",
+        "Image": "liu_ming.jpg",
+        "Rating": 4.8,
+        "Comment": "Li Wei's class is a window into the beautiful world of Chinese culture."
+      },
+      {
+        "Name": "Sophia Chen",
+        "Image": "sophia_chen.jpg",
+        "Rating": 4.3,
+        "Comment": "A unique course that teaches you Chinese writing and traditions."
+      }
+    ]
+  },
+  {
+    "Title": "German Language",
+    "InstructorName": "Hans Müller",
+    "InstructorPhoto": "hans_mueller.jpg",
+    "Enroll": 85,
+    "Seat": 100,
+    "Thumbnail": "https://i.ibb.co/jgRLJnv/japan.jpg",
+    "Description": "Join this immersive course to learn German quickly and effectively.",
+    "Rating" : 4.3,
+    "Reviews": [
+      {
+        "Name": "Anna Fischer",
+        "Image": "anna_fischer.jpg",
+        "Rating": 4.6,
+        "Comment": "Hans is a fantastic teacher, and I now speak German fluently."
+      },
+      {
+        "Name": "Paul Schneider",
+        "Image": "paul_schneider.jpg",
+        "Rating": 4.2,
+        "Comment": "This course has been instrumental in improving my German skills."
+      }
+    ]
+  },
+  {
+    "Title": "Japanese Language Culture",
+    "InstructorName": "Yuki Tanaka",
+    "InstructorPhoto": "yuki_tanaka.jpg",
+    "Enroll": 90,
+    "Seat": 110,
+    "Thumbnail": "https://i.ibb.co/fDmy9M6/spanish.jpg",
+    "Description": "Explore the Japanese language, customs, and traditions in-depth.",
+    "Rating" : 5,
+    "Reviews": [
+      {
+        "Name": "Emily Wilson",
+        "Image": "emily_wilson.jpg",
+        "Rating": 4.7,
+        "Comment": "Yuki is an engaging instructor who makes Japanese culture come alive."
+      },
+      {
+        "Name": "David Lee",
+        "Image": "david_lee.jpg",
+        "Rating": 4.4,
+        "Comment": "This course has given me a deep understanding of Japan."
+      }
+    ]
+  },
+  {
+    "Title": "Russian for Travelers",
+    "InstructorName": "Elena Petrov",
+    "InstructorPhoto": "elena_petrov.jpg",
+    "Enroll": 60,
+    "Seat": 75,
+    "Thumbnail": "https://i.ibb.co/ZVSJ3Bs/turki.jpg",
+    "Description": "Learn essential Russian phrases and culture for your travels.",
+    "Rating" : 4.5,
+    "Reviews": [
+      {
+        "Name": "John Davis",
+        "Image": "john_davis.jpg",
+        "Rating": 4.8,
+        "Comment": "Elena's class is perfect for anyone planning to visit Russia."
+      },
+      {
+        "Name": "Sophia Chen",
+        "Image": "sophia_chen.jpg",
+        "Rating": 4.2,
+        "Comment": "I'm now confident traveling in Russia thanks to this course."
+      }
+    ]
+  },
+  {
+    "Title": "Italian Language & Culture",
+    "InstructorName": "Giuseppe Rossi",
+    "InstructorPhoto": "giuseppe_rossi.jpg",
+    "Enroll": 75,
+    "Seat": 90,
+    "Thumbnail": "https://i.ibb.co/c2Q901b/others.jpg",
+    "Description": "Immerse yourself in the Italian language and explore its rich culture.",
+    "Rating" : 4.5,
+    "Reviews": [
+      {
+        "Name": "Sophia Bianchi",
+        "Image": "sophia_bianchi.jpg",
+        "Rating": 4.6,
+        "Comment": "Giuseppe is a passionate teacher, and I've fallen in love with Italian."
+      },
+      {
+        "Name": "Marco Russo",
+        "Image": "marco_russo.jpg",
+        "Rating": 4.3,
+        "Comment": "This course made me appreciate Italy and its language even more."
+      }
+    ]
+  },
+  {
+    "Title": "Arabic Workshop",
+    "InstructorName": "Nadia Khalil",
+    "InstructorPhoto": "nadia_khalil.jpg",
+    "Enroll": 65,
+    "Seat": 75,
+    "Thumbnail": "https://i.ibb.co/DzqxZKB/arabic.png",
+    "Description": "Learn the beautiful art of Arabic calligraphy and its cultural significance.",
+    "Rating" : 3.5,
+    "Reviews": [
+      {
+        "Name": "Amir Ahmed",
+        "Image": "amir_ahmed.jpg",
+        "Rating": 4.7,
+        "Comment": "Nadia's class is a transformative experience into Arabic art and tradition."
+      },
+      {
+        "Name": "Amina Hassan",
+        "Image": "amina_hassan.jpg",
+        "Rating": 4.4,
+        "Comment": "This course introduced me to the beauty of Arabic calligraphy."
+      }
+    ]
+  },
+  {
+    "Title": "Korean for Enthusiasts",
+    "InstructorName": "Ji-hoon Kim",
+    "InstructorPhoto": "ji_hoon_kim.jpg",
+    "Enroll": 50,
+    "Seat": 60,
+    "Thumbnail": "https://i.ibb.co/yk2ynYC/5.jpg",
+    "Description": "Learn conversational Korean and enjoy K-Dramas without subtitles.",
+    "Rating" : 3.2,
+    "Reviews": [
+      {
+        "Name": "Sarah Park",
+        "Image": "sarah_park.jpg",
+        "Rating": 4.9,
+        "Comment": "Ji-hoon's class made me appreciate K-Dramas on a whole new level."
+      },
+      {
+        "Name": "James Lee",
+        "Image": "james_lee.jpg",
+        "Rating": 4.5,
+        "Comment": "I can now follow K-Dramas without needing translations."
+      }
+    ]
+  },
+  {
+    "Title": "Bengali Language",
+    "InstructorName": "Riya Das",
+    "InstructorPhoto": "https://i.ibb.co/z45DfG8/Bengali.jpg",
+    "Enroll": 55,
+    "Seat": 70,
+    "Thumbnail": "https://i.ibb.co/z45DfG8/Bengali.jpg",
+    "Description": "Discover the beauty of the Bengali language and its rich cultural heritage.",
+    "Rating" : 5,
+    "Reviews": [
+      {
+        "Name": "Amit Ghosh",
+        "Image": "amit_ghosh.jpg",
+        "Rating": 4.7,
+        "Comment": "Riya's class is a wonderful introduction to Bengali language and culture."
+      },
+      {
+        "Name": "Mira Chatterjee",
+        "Image": "mira_chatterjee.jpg",
+        "Rating": 4.4,
+        "Comment": "I've gained a deep appreciation for Bengali language and traditions."
+      }
+    ]
+  }
+]

@@ -1,11 +1,12 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { FaSistrix, FaUser, FaUserCircle } from "react-icons/fa";
 import { AuthContext } from '../../../Provider/AuthProvider';
 
 const Navbar = () => {
 
     const { user, logout } = useContext(AuthContext)
+    const location = useLocation()
 
     const handlelogout = () => {
         logout()
@@ -15,7 +16,7 @@ const Navbar = () => {
         <>
             <Link to="/" className={`px-3 hover:font-bold hover:underline hover:duration-5000 ${location.pathname === '/' ? 'active-link font-bold underline text-black' : ''}`}>Home</Link>
             <Link to="/" className={`px-3 hover:font-bold hover:underline hover:duration-5000 ${location.pathname === '/about' ? 'active-link font-bold underline text-black' : ''}`}>About Us</Link>
-            <Link to="/" className={`px-3 hover:font-bold hover:underline hover:duration-5000 ${location.pathname === '/allclass' ? 'active-link font-bold underline text-black' : ''}`}>All Class</Link>
+            <Link to="/allclass" className={`px-3 hover:font-bold hover:underline hover:duration-5000 ${location.pathname === '/allclass' ? 'active-link font-bold underline text-black' : ''}`}>All Class</Link>
             <Link to="/" className={`px-3 hover:font-bold hover:underline hover:duration-5000 ${location.pathname === '/blogs' ? 'active-link font-bold underline text-black' : ''}`}>Blogs</Link>
             <Link to="/" className={`px-3 hover:font-bold hover:underline hover:duration-5000 ${location.pathname === '/contact' ? 'active-link font-bold underline text-black' : ''}`}>Contact</Link>
         </>

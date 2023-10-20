@@ -15,7 +15,7 @@ import { FaCheckCircle } from "react-icons/fa";
 
 const About = () => {
     return (
-        <div className='grid md:grid-cols-2 p-5 md:p-16 justify-center items-center'>
+        <div className='grid md:grid-cols-2 mt-20 mb-20 p-5 md:p-16 justify-center items-center'>
             <div className='md:flex justify-between md:gap-x-20'>
                 <div className='md:w-3/4 text-center md:text-left pb-5'>
                     <h1 className='text-3xl font-bold pb-5'>WE ARE THE BEST <span className='text-purple-700'>SUMMER CAMP!</span></h1>
