@@ -11,7 +11,7 @@ const AllClass = () => {
     const [ShowByGrid, setShowByGrid] = useState(true)
 
     useEffect(() => {
-        fetch('allclass.json')
+        fetch('http://localhost:5000/allclass')
             .then(res => res.json())
             .then(data => {
                 setItems(data);

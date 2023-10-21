@@ -17,7 +17,7 @@ const BestClass = () => {
     };
 
     useEffect(() => {
-        fetch('allclass.json')
+        fetch('http://localhost:5000/allclass')
             .then(res => res.json())
             .then(data => setBestClass(data))
     }, [])

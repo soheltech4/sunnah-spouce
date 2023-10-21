@@ -25,7 +25,7 @@ const ShowClassList = ({ item }) => {
                             readOnly
                             value={itemRating}
                         />
-                        <Button title="ADD CART"></Button>
+                        <Button title="ADD CART" item={item}></Button>
                     </div>
                 </div>
             </div>
