@@ -6,7 +6,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import Swal from 'sweetalert2';
 
 const Button = ({ title, item, link }) => {
-    const { _id, Title, InstructorName, Thumbnail, Price, Language } = item
+    const { _id, Title, InstructorName, Thumbnail, Price, Seat, Enroll, Language } = item
 
     const { user } = useContext(AuthContext)
     const [cart, refetch] = useCart()
@@ -41,7 +41,7 @@ const Button = ({ title, item, link }) => {
         }
         else {
             Swal.fire({
-                title: 'Please Login to order the toy',
+                title: 'Please Login to Add the Class',
                 icon: 'warning',
                 showCancelButton: true,
                 confirmButtonColor: '#3085d6',
@@ -55,15 +55,24 @@ const Button = ({ title, item, link }) => {
         }
     }
 
-
     return (
         <div>
-            <Link onClick={() => handleAddCart(item)} href="#_" class="relative inline-flex items-center px-3 py-2 overflow-hidden text-lg font-medium text-purple-600 border-2 border-purple-600 rounded-full hover:text-white group hover:bg-gray-50">
-                <span class="absolute left-0 block w-full h-0 transition-all bg-purple-600 opacity-100 group-hover:h-full top-1/2 group-hover:top-0 duration-400 ease"></span>
-                <span class="absolute right-0 flex items-center justify-start w-10 h-10 duration-300 transform translate-x-full group-hover:translate-x-0 ease">
-                </span>
-                <span class="relative text-xs">{title}</span>
-            </Link>
+            {Seat - Enroll == 0 ?
+                <>
+                    <p href="#_" class="relative inline-flex items-center px-3 py-2 overflow-hidden text-lg font-medium text-gray-400 border-2 border-gray-400 rounded-full group ">
+                        <span class="relative text-xs">{title}</span>
+                    </p>                        </>
+                :
+                <>
+                    <button onClick={() => { handleAddCart(item) }} href="#_" class="relative inline-flex items-center px-3 py-2 overflow-hidden text-lg font-medium text-purple-600 border-2 border-purple-600 rounded-full hover:text-white group hover:bg-gray-50">
+                        <span class="absolute left-0 block w-full h-0 transition-all bg-purple-600 opacity-100 group-hover:h-full top-1/2 group-hover:top-0 duration-400 ease"></span>
+                        <span class="absolute right-0 flex items-center justify-start w-10 h-10 duration-300 transform translate-x-full group-hover:translate-x-0 ease">
+                        </span>
+                        <span class="relative text-xs">{title}</span>
+                    </button>
+                </>
+            }
+
         </div>
     );
 };

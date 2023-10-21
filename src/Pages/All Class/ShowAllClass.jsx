@@ -4,12 +4,23 @@ import { Rating } from '@smastrom/react-rating'
 import '@smastrom/react-rating/style.css'
 import Button from '../Button/Button';
 
-const ShowAllClass = ({item}) => {
+const ShowAllClass = ({ item }) => {
     const { Title, InstructorName, Thumbnail, Enroll, Seat, Rating: itemRating } = item
     return (
         <div className='' alt="Click for show details">
             <div className="w-auto glass card">
-                <figure ><img src={Thumbnail} className='w-full' /></figure>
+                <figure className='' >
+                    <img src={Thumbnail} className='w-full' />
+                    {Seat - Enroll == 0 ?
+                        <>
+                            <p className='absolute bg-purple-600 top-0 left-0 m-2 px-2 text-white rounded-lg'>Not Available</p>
+                        </>
+                        :
+                        <>
+                        </>
+                    }
+                </figure>
+
                 <div className="p-2">
                     <div className=''>
                         <h2 className="text-lg font-bold">{Title}</h2>
@@ -23,7 +34,7 @@ const ShowAllClass = ({item}) => {
                             readOnly
                             value={itemRating}
                         />
-                        <Button title="ADD CART" item={item}></Button>
+                        <Button title="ADD TO CART" item={item}></Button>
                     </div>
                 </div>
             </div>

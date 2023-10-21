@@ -8,7 +8,18 @@ const ShowClassList = ({ item }) => {
     return (
         <div className="glass rounded-lg">
             <div className="md:flex ">
-                <img src={Thumbnail} className="md:w-80 rounded-lg" />
+                <figure className='' >
+                    <img src={Thumbnail} className='w-full' />
+                    {Seat - Enroll == 0 ?
+                        <>
+                            <p className='absolute bg-purple-600 top-0 left-0 m-2 px-2 text-white rounded-lg'>Not Available</p>
+                        </>
+                        :
+                        <>
+                        </>
+                    }
+                </figure>
+
                 <div className='p-2 grid grid-cols-1 justify-between'>
                     <div>
                         <h1 className="text-xl font-bold">{Title}</h1>
@@ -25,7 +36,7 @@ const ShowClassList = ({ item }) => {
                             readOnly
                             value={itemRating}
                         />
-                        <Button title="ADD CART" item={item}></Button>
+                        <Button title="ADD TO CART" item={item}></Button>
                     </div>
                 </div>
             </div>
