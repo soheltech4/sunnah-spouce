@@ -1,0 +1,102 @@
+[
+    {
+      "name": "Julia Kim",
+      "photo" : "https://i.ibb.co/jZP19LY/techer-3.jpg",
+      "email": "julia.kim@email.com",
+      "phone": "123-456-7890",
+      "courses_taught": ["English Language Camp", "Conversation Skills Camp"],
+      "experience_years": 5,
+      "bio": "Julia Kim is a dedicated instructor of English language camps and conversation skills. With 5 years of experience, she helps students improve their English fluency and communication abilities.",
+      "rating": 4.7
+    },
+    {
+      "name": "Carlos Rodriguez",
+      "photo" : "https://i.ibb.co/WWLkfvR/techer-1.jpg",
+      "email": "carlos.rodriguez@email.com",
+      "phone": "987-654-3210",
+      "courses_taught": ["Spanish Language Immersion Camp", "Cultural Exchange Camp"],
+      "experience_years": 7,
+      "bio": "Carlos Rodriguez is a passionate teacher specializing in Spanish language immersion and cultural exchange camps. With 7 years of experience, he fosters cross-cultural understanding among his students.",
+      "rating": 4.8
+    },
+    {
+      "name": "Yuki Tanaka",
+      "photo" : "https://i.ibb.co/x2gBYMQ/techer-2.jpg",
+      "email": "yuki.tanaka@email.com",
+      "phone": "555-123-4567",
+      "courses_taught": ["Japanese Language Intensive Camp", "Calligraphy and Culture Camp"],
+      "experience_years": 8,
+      "bio": "Yuki Tanaka is an enthusiastic instructor of Japanese language intensive camps and calligraphy and culture camps. With 8 years of teaching experience, she shares the beauty of Japanese language and art.",
+      "rating": 4.9
+    },
+    {
+      "name": "Elena Petrov",
+      "photo" : "https://i.ibb.co/NFHxmMB/techer-4.jpg",
+      "email": "elena.petrov@email.com",
+      "phone": "777-888-9999",
+      "courses_taught": ["Russian Language Camp", "Matryoshka Art Camp"],
+      "experience_years": 6,
+      "bio": "Elena Petrov is an accomplished teacher in Russian language and Matryoshka art. With 6 years of teaching experience, she introduces students to the richness of Russian culture.",
+      "rating": 4.6
+    },
+    {
+      "name": "Amit Patel",
+      "photo" : "https://i.ibb.co/SKtQbhL/techer-5.jpg",
+      "email": "amit.patel@email.com",
+      "phone": "111-222-3333",
+      "courses_taught": ["Hindi Language Camp", "Bollywood Dance Camp"],
+      "experience_years": 9,
+      "bio": "Amit Patel is a dedicated educator specializing in Hindi language and Bollywood dance. With 9 years of experience, he combines language learning with the joy of dance.",
+      "rating": 4.7
+    },
+    {
+      "name": "Marie Dubois",
+      "photo" : "https://i.ibb.co/5YHq26c/techer-10.jpg",
+      "email": "marie.dubois@email.com",
+      "phone": "444-555-6666",
+      "courses_taught": ["French Language Immersion Camp", "Cuisine and Culture Camp"],
+      "experience_years": 6,
+      "bio": "Marie Dubois is a passionate instructor of French language immersion and cuisine and culture camps. With 6 years of teaching experience, she brings the flavors and language of France to her students.",
+      "rating": 4.8
+    },
+    {
+      "name": "Andreas Mueller",
+      "photo" : "https://i.ibb.co/LSCKrwZ/techer-6.jpg",
+      "email": "andreas.mueller@email.com",
+      "phone": "999-888-7777",
+      "courses_taught": ["German Language Camp", "History and Heritage Camp"],
+      "experience_years": 10,
+      "bio": "Andreas Mueller is an experienced teacher of the German language and history and heritage camps. With a decade of teaching experience, he imparts the German language and culture to his students.",
+      "rating": 4.9
+    },
+    {
+      "name": "Sofia Vasquez",
+      "photo" : "https://i.ibb.co/nwxfnmb/techer-7.jpg",
+      "email": "sofia.vasquez@email.com",
+      "phone": "777-666-5555",
+      "courses_taught": ["Spanish Language Camp", "Flamenco Dance Camp"],
+      "experience_years": 7,
+      "bio": "Sofia Vasquez is a dedicated instructor of Spanish language and flamenco dance camps. With 7 years of experience, she helps students embrace the vibrant culture of Spain.",
+      "rating": 4.6
+    },
+    {
+      "name": "Ling Chen",
+      "photo" : "https://i.ibb.co/CQd1pMs/techer-8.jpg",
+      "email": "ling.chen@email.com",
+      "phone": "333-222-1111",
+      "courses_taught": ["Mandarin Chinese Language Camp", "Chinese Calligraphy Camp"],
+      "experience_years": 8,
+      "bio": "Ling Chen is a passionate educator of Mandarin Chinese language and Chinese calligraphy camps. With 8 years of teaching experience, she shares the beauty of Chinese language and art.",
+      "rating": 4.7
+    },
+    {
+      "name": "Giorgio Rossi",
+      "photo" : "https://i.ibb.co/rdBKQpF/techer-9.jpg",
+      "email": "giorgio.rossi@email.com",
+      "phone": "555-999-4444",
+      "courses_taught": ["Italian Language Camp", "Art and History of Italy Camp"],
+      "experience_years": 6,
+      "bio": "Giorgio Rossi is an accomplished teacher of the Italian language and the art and history of Italy camps. With 6 years of teaching experience, he introduces students to the beauty of Italy.",
+      "rating": 4.8
+    }
+  ]

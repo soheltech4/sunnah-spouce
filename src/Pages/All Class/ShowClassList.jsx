@@ -9,7 +9,7 @@ const ShowClassList = ({ item }) => {
         <div className="glass rounded-lg">
             <div className="md:flex ">
                 <figure className='' >
-                    <img src={Thumbnail} className='w-full' />
+                    <img src={Thumbnail} className='rounded-lg' />
                     {Seat - Enroll == 0 ?
                         <>
                             <p className='absolute bg-purple-600 top-0 left-0 m-2 px-2 text-white rounded-lg'>Not Available</p>
