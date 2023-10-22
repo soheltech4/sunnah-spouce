@@ -22,9 +22,9 @@ const Dashboard = () => {
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-6 h-6 stroke-current"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
                 </label>
             </label>
-            <div className="drawer-side ">
+            <div className="drawer-side">
                 <label htmlFor="my-drawer-2" aria-label="close sidebar" className="drawer-overlay"></label>
-                <ul className="menu text-lg min-h-full bg-purple-100  text-base-content">
+                <ul className="menu text-lg min-h-full bg-purple-200  text-base-content">
                     <div className='p-5 pl-10 grid grid-cols-2 justify-between items-center'>
                         <img src={user?.photoURL} className='w-20 rounded-full items-center pb-2' alt="" />
                         <p className='uppercase font-bold text-2xl'>{user?.displayName}</p>
@@ -33,7 +33,7 @@ const Dashboard = () => {
                         <li>
                             <Link to="myprofile"
                                 className={`px-3  bg-opacity-20 rounded hover:duration-1000 
-                            ${location.pathname === 'dashboard/myprofile' ? 'active-link bg-white bg-opacity-30' : ''}`}>
+                            ${location.pathname === 'dashboard/myprofile' ? 'active-link' : ''}`}>
                                 <FaUser className='text-purple-600' />My Profile
                             </Link>
                         </li>
@@ -41,22 +41,22 @@ const Dashboard = () => {
                         <li>
                             <Link to="mycart"
                                 className={`px-3 bg-opacity-20 rounded hover:duration-1000 
-                            ${location.pathname === '/dashboard/mycart' ? 'active-link bg-white bg-opacity-30 ' : ''}`}>
+                            ${location.pathname === '/dashboard/mycart' ? 'active-link bg-white' : ''}`}>
                                 <FaShoppingCart className='text-purple-600' />My Cart<span className="badge badge-accent font-bold">{cart?.length || 0}</span>
                             </Link>
                         </li>
 
                         <li>
-                            <Link to="addtoy"
+                            <Link to="addclass"
                                 className={`px-3 bg-opacity-20 rounded hover:duration-1000 
-                            ${location.pathname === '/dashboard/addclass' ? 'active-link bg-white bg-opacity-30' : ''}`}>
+                            ${location.pathname === '/dashboard/addclass' ? 'active-link bg-white' : ''}`}>
                                 <FaBox className='text-purple-600' />Add Class
                             </Link>
                         </li>
                         <li>
-                            <Link to="mytoy"
+                            <Link to="myclass"
                                 className={`px-3 bg-opacity-20 rounded hover:duration-1000 
-                            ${location.pathname === '/dashboard/myclass' ? 'active-link bg-white bg-opacity-30' : ''}`}>
+                            ${location.pathname === '/dashboard/myclass' ? 'active-link bg-white' : ''}`}>
                                 <FaLayerGroup className='text-purple-600' />My Class
                             </Link>
                         </li>
@@ -66,7 +66,7 @@ const Dashboard = () => {
                         <li>
                             <Link to="/"
                                 className={`px-3 bg-opacity-20 rounded hover:duration-1000 
-                            ${location.pathname === '/' ? 'active-link bg-white bg-opacity-30 ' : ''}`}>
+                            ${location.pathname === '/' ? 'active-link bg-white' : ''}`}>
                                 <FaHome className='text-purple-600' />Home
                             </Link>
                         </li>
