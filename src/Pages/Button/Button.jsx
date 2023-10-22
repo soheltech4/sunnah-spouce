@@ -6,7 +6,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import Swal from 'sweetalert2';
 
 const Button = ({ title, item, link }) => {
-    const { _id, Title, InstructorName, Thumbnail, Price, Seat, Enroll, Language } = item
+    const { _id, Title, InstructorName, Thumbnail, price, Seat, Enroll, Language } = item
 
     const { user } = useContext(AuthContext)
     const [cart, refetch] = useCart()
@@ -16,7 +16,7 @@ const Button = ({ title, item, link }) => {
     const handleAddCart = item => {
         console.log(item)
         if (user && user?.email) {
-            const classItem = { itemId: _id, Title, InstructorName, Thumbnail, Price, Language, email: user?.email }
+            const classItem = { itemId: _id, Title, InstructorName, Thumbnail, price, Language, email: user?.email }
             console.log(classItem)
             fetch('http://localhost:5000/carts', {
                 method: 'POST',
