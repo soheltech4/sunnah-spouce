@@ -107,7 +107,7 @@ const MyCart = () => {
                                                     <h1>{index + 1}</h1>
                                                 </td>
                                                 <td>
-                                                    <Link to={`/classdetails/${item?.classId}`}>
+                                                    <Link to={`/allclass/${item?.itemId}`}>
                                                         <div className="avatar">
                                                             <div className="mask mask-square w-12 h-12">
                                                                 <img src={item?.Thumbnail} className='' alt="Avatar Tailwind CSS Component" />

@@ -68,7 +68,7 @@ const AllClass = () => {
                         {filteredItems.length === 0 ?
                             (
                                 <p className='text-lg text-red-600 text-center'>No Class found</p>
-                            ) : (filteredItems.map((item, indexOf) => (<ShowAllClass key={indexOf} item={item} />
+                            ) : (filteredItems.map(item => (<ShowAllClass key={item?._id} item={item} />
                             ))
                             )}
                     </div>
@@ -79,7 +79,7 @@ const AllClass = () => {
                         {filteredItems.length === 0 ?
                             (
                                 <p className='text-lg text-red-600 text-center'>No Class found</p>
-                            ) : (filteredItems.map((item, indexOf) => (<ShowClassList key={indexOf} item={item} />
+                            ) : (filteredItems.map(item => (<ShowClassList key={item?._id} item={item} />
                             ))
                             )}
                     </div>

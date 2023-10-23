@@ -51,7 +51,7 @@ const Instructor = () => {
     return (
         <div className='md:px-56 md:pt-24 md:pb-24 mt-20 '>
             <p className='text-4xl pb-20 font-bold uppercase text-center'>Our Honored Instructors</p>
-            <div className='bg-black'>
+            <div className=''>
                 <Slider {...settings}>
                     {
                         Instructors.map(teacher => <InstructorShow key={teacher?._id} teacher={teacher}></InstructorShow>)

@@ -5,7 +5,7 @@ import { AuthContext } from '../../Provider/AuthProvider';
 import { ToastContainer, toast } from 'react-toastify';
 import Swal from 'sweetalert2';
 
-const Button = ({ title, item, link }) => {
+const Button = ({ title, item }) => {
     const { _id, Title, InstructorName, Thumbnail, price, Seat, Enroll, Language } = item
 
     const { user } = useContext(AuthContext)
