@@ -5,6 +5,7 @@ import ClassDetailsShow from './ClassDetailsShow';
 const ClassDetails = () => {
 
     const items = useLoaderData([])
+    console.log(items)
 
     return (
         <div className='pt-20'>

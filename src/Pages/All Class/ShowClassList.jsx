@@ -2,14 +2,17 @@ import { Rating } from '@smastrom/react-rating';
 import React from 'react';
 import '@smastrom/react-rating/style.css'
 import Button from '../Button/Button';
+import { Link } from 'react-router-dom';
 
 const ShowClassList = ({ item }) => {
-    const { Title, InstructorName, Thumbnail, Enroll, Seat, Rating: itemRating, Description } = item
+    const {_id, Title, InstructorName, Thumbnail, Enroll, Seat, Rating: itemRating, Description } = item
     return (
         <div className="glass rounded-lg">
             <div className="md:flex ">
                 <figure className='' >
-                    <img src={Thumbnail} className='rounded-lg' />
+                    <Link to={`/allclass/${_id}`}>
+                        <img src={Thumbnail} className='rounded-lg' />
+                    </Link>
                     {Seat - Enroll == 0 ?
                         <>
                             <p className='absolute bg-purple-600 top-0 left-0 m-2 px-2 text-white rounded-lg'>Not Available</p>

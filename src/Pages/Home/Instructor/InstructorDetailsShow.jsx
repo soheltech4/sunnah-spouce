@@ -11,7 +11,7 @@ const InstructorDetailsShow = ({ instructor }) => {
         <div className='md:p-20 p-10 pt-20 rounded-lg '>
             <div className="bg-gray-500 p-10  bg-opacity-25 md:p-20 rounded-lg">
                 <div className="md:flex md:gap-20 md:flex-col lg:flex-row">
-                    <img src={photo} className="md:w-80 rounded-lg shadow-2xl" />
+                    <img src={photo} className="md:w-80 rounded-lg shadow-md" />
                     <div className=''>
                         <div className='flex justify-between md:my-0 my-5'>
                             <h1 className="md:text-4xl text-xl  font-bold uppercase">{name}</h1>
