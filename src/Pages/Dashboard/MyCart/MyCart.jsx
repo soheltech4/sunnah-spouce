@@ -47,13 +47,12 @@ const MyCart = () => {
     }
 
 
-
     return (
         <div className='w-full h-full md:p-10 pt-10 text-lg'>
             {item ?
                 <>
                     <div className='relative md:flex justify-evenly lg:flex-row-reverse gap-x-24 rounded-md  px-10 '>
-                        <div className='bg-purple-200 shadow-lg bg-opacity-25 w-full md:w-1/3 md: h-2/3 rounded-lg p-5'>
+                        <div className='bg-purple-100 shadow-lg w-full md:w-1/3 md: h-2/3 rounded-lg p-5'>
                             <div className=''>
                                 <h1 className='text-lg font-bold text-center'>Order Summary</h1>
                                 <div className="divider"></div>
@@ -88,7 +87,7 @@ const MyCart = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="overflow-x-auto  bg-purple-200 shadow-md bg-opacity-25 w-full rounded-lg">
+                        <div className="overflow-x-auto  bg-purple-100 shadow-md bg-opacity-25 w-full rounded-lg">
                             <table className="table tex- ">
                                 <thead>
                                     <tr className='text-center text-lg'>
@@ -99,7 +98,7 @@ const MyCart = () => {
                                         <th>Action</th>
                                     </tr>
                                 </thead>
-                                <tbody className='text-center text-lg bg-orange-100 '>
+                                <tbody className='text-center text-lg bg-purple-100 '>
                                     {
                                         cart.map((item, index) =>
                                             <tr key={item?._id}>

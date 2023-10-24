@@ -37,6 +37,13 @@ const Dashboard = () => {
                                 <FaUser className='text-purple-600' />My Profile
                             </Link>
                         </li>
+                        <li>
+                            <Link to="users"
+                                className={`px-3  bg-opacity-20 rounded hover:duration-1000 
+                            ${location.pathname === 'dashboard/users' ? 'active-link bg-white' : ''}`}>
+                                <FaUser className='text-purple-600' />All Users
+                            </Link>
+                        </li>
 
                         <li>
                             <Link to="mycart"

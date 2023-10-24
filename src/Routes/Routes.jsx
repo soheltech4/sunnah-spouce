@@ -10,6 +10,8 @@ import Dashboard from "../Layouts/Dashboard";
 import MyCart from "../Pages/Dashboard/MyCart/MyCart";
 import InstructorDetials from "../Pages/Home/Instructor/InstructorDetials";
 import ClassDetails from "../Class Details/ClassDetails";
+import Users from "../Pages/Dashboard/Users/Users";
+import AddClass from "../Pages/Dashboard/Add Class/AddClass";
 
 export const router = createBrowserRouter([
   {
@@ -51,6 +53,14 @@ export const router = createBrowserRouter([
       {
         path: '/dashboard/mycart',
         element: <MyCart></MyCart>
+      },
+      {
+        path: '/dashboard/users',
+        element: <Users></Users>
+      },
+      {
+        path: '/dashboard/addclass',
+        element: <AddClass></AddClass>
       }
     ]
   }
