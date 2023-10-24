@@ -22,19 +22,32 @@ const Login = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user);
-                toast.success('Login Successfully!', {
-                    position: 'top-center',
-                    autoClose: 2000,
-                    hideProgressBar: false,
-                    closeOnClick: true,
-                    pauseOnHover: true,
-                    draggable: true,
-                    progress: undefined,
-                    theme: 'light',
-                });
-                navigate(from, {replace: true})
-                form.email.value = '';
-                form.password.value = ''
+                const saveUser = {email, password}
+                fetch('http://localhost:5000/users', {
+                    method : 'POST',
+                    headers : {
+                        'content-type' : 'application/json'
+                    },
+                    body : JSON.stringify(saveUser)
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        if (data.insertedId) {
+                            toast.success('Login Successfully!', {
+                                position: 'top-center',
+                                autoClose: 2000,
+                                hideProgressBar: false,
+                                closeOnClick: true,
+                                pauseOnHover: true,
+                                draggable: true,
+                                progress: undefined,
+                                theme: 'light',
+                            });
+                        }
+                        navigate(from, { replace: true })
+                        form.email.value = '';
+                        form.password.value = ''
+                    })
             });
     };
 
@@ -63,7 +76,7 @@ const Login = () => {
                     <Link className="underline text-purple-600 text-lg" to="/signup">Sign Up</Link> If you don't have an account
                 </a>
             </div>
-            <ToastContainer/>
+            <ToastContainer />
         </div>
     );
 };

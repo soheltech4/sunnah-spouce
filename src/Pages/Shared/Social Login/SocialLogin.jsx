@@ -6,9 +6,8 @@ import { useLocation, useNavigate } from 'react-router-dom';
 
 
 const SocialLogin = ({title}) => {
-
     const {googlesignin} = useContext(AuthContext)
-
+    
     const navigate = useNavigate()
     const location = useLocation()
 
@@ -19,6 +18,24 @@ const SocialLogin = ({title}) => {
         .then(result => {
             const loggeduser = result.user 
             console.log(loggeduser)
+
+            const saveUser = {email: loggeduser.email, name: loggeduser.displayName}
+            fetch('http://localhost:5000/users', {
+                method : 'POST',
+                headers : {
+                    'content-type' : 'application/json'
+                },
+                body : JSON.stringify(saveUser)
+            }
+            )
+            .then(res => res.json())
+            .then(() => {
+                    navigate(from, {replace: true})
+            })
+            
+
+
+
             toast.success('Login Successfully!', {
                 position: 'top-center',
                 autoClose: 2000,
