@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { FaBars, FaBox, FaHome, FaLayerGroup, FaLocationArrow, FaShoppingCart, FaUser } from 'react-icons/fa';
+import { FaBars, FaBox, FaHome, FaLayerGroup, FaLocationArrow, FaShoppingCart, FaUser, FaUsers } from 'react-icons/fa';
 import { Link, Outlet, useLocation } from 'react-router-dom';
 import useCart from '../Hooks/useCart';
 import { AuthContext } from '../Provider/AuthProvider';
@@ -24,7 +24,7 @@ const Dashboard = () => {
             </label>
             <div className="drawer-side">
                 <label htmlFor="my-drawer-2" aria-label="close sidebar" className="drawer-overlay"></label>
-                <ul className="menu text-lg min-h-full bg-purple-200  text-base-content">
+                <ul className="menu text-lg min-h-full bg-purple-200 text-base-content">
                     <div className='p-5 pl-10 grid grid-cols-2 justify-between items-center'>
                         <img src={user?.photoURL} className='w-20 rounded-full items-center pb-2' alt="" />
                         <p className='uppercase font-bold text-2xl'>{user?.displayName}</p>
@@ -37,20 +37,13 @@ const Dashboard = () => {
                                 <FaUser className='text-purple-600' />My Profile
                             </Link>
                         </li>
-                        {user?.role === 'admin' ?
-                            <>
-                                <li>
-                                    <Link to="users"
-                                        className={`px-3  bg-opacity-20 rounded hover:duration-1000 
+                        <li>
+                            <Link to="users"
+                                className={`px-3  bg-opacity-20 rounded hover:duration-1000 
                             ${location.pathname === 'dashboard/users' ? 'active-link bg-white' : ''}`}>
-                                        <FaUser className='text-purple-600' />All Users
-                                    </Link>
-                                </li>
-                            </> :
-                            <></>
-
-                        }
-
+                                <FaUsers className='text-purple-600' />All Users
+                            </Link>
+                        </li>
                         <li>
                             <Link to="mycart"
                                 className={`px-3 bg-opacity-20 rounded hover:duration-1000 
