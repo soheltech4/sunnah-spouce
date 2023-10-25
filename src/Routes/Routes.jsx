@@ -12,6 +12,7 @@ import InstructorDetials from "../Pages/Home/Instructor/InstructorDetials";
 import ClassDetails from "../Class Details/ClassDetails";
 import Users from "../Pages/Dashboard/Users/Users";
 import AddClass from "../Pages/Dashboard/Add Class/AddClass";
+import AllofClasses from "../Pages/Dashboard/All of Classes/AllofClasses";
 
 export const router = createBrowserRouter([
   {
@@ -50,6 +51,10 @@ export const router = createBrowserRouter([
     path: '/dashboard',
     element: <Dashboard></Dashboard>,
     children: [
+      {
+        path: '/dashboard/allclass',
+        element: <AllofClasses></AllofClasses>
+      },
       {
         path: '/dashboard/mycart',
         element: <MyCart></MyCart>

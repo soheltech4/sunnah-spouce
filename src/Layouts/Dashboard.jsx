@@ -38,6 +38,13 @@ const Dashboard = () => {
                             </Link>
                         </li>
                         <li>
+                            <Link to="allclass"
+                                className={`px-3  bg-opacity-20 rounded hover:duration-1000 
+                            ${location.pathname === 'dashboard/allclass' ? 'active-link bg-white' : ''}`}>
+                                <FaUsers className='text-purple-600' />All Classes
+                            </Link>
+                        </li>
+                        <li>
                             <Link to="users"
                                 className={`px-3  bg-opacity-20 rounded hover:duration-1000 
                             ${location.pathname === 'dashboard/users' ? 'active-link bg-white' : ''}`}>
