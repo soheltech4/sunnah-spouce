@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { FaTrashAlt } from 'react-icons/fa';
+import { FaTrashAlt, FaUserShield } from 'react-icons/fa';
 import Swal from 'sweetalert2';
 import useCart from '../../../Hooks/useCart';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
 
 const Users = () => {
     const [users, setUsers] = useState([])
@@ -12,6 +16,52 @@ const Users = () => {
             .then(res => res.json())
             .then(data => setUsers(data))
     }, [])
+
+
+    const handleMakeAdmin = user => {
+        fetch(`http://localhost:5000/users/admin/${user?._id}`, {
+            method: 'PATCH'
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                if (data.modifiedCount) {
+                    toast.success(`${user?.name} is admin Now!`, {
+                        position: 'top-center',
+                        autoClose: 2000,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                        theme: 'light',
+                    });
+                }
+            })
+    }
+
+    const handleMakeInstructor = user => {
+        fetch(`http://localhost:5000/users/instructor/${user?._id}`, {
+            method: 'PATCH',
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                if (data.modifiedCount) {
+                    toast.success(`${user?.name} is Instructor Now!`, {
+                        position: 'top-center',
+                        autoClose: 2000,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                        theme: 'light',
+                    });
+                }
+            })
+    }
+
 
 
     const handleDelete = user => {
@@ -54,9 +104,9 @@ const Users = () => {
                                 <thead>
                                     <tr className='text-center text-lg'>
                                         <th>#</th>
-                                        <th>Photo</th>
                                         <th>Name</th>
                                         <th>Email</th>
+                                        <th>User</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
@@ -68,16 +118,28 @@ const Users = () => {
                                                     <h1>{indexOf + 1}</h1>
                                                 </td>
                                                 <td>
-                                                    <div className="avatar">
-                                                        <div className="mask mask-square w-12 h-12">
-                                                            <img src={user?.photoURL} className='' alt="Avatar Tailwind CSS Component" />
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
                                                     <p>{user?.name}</p>
                                                 </td>
                                                 <td>{user?.email}</td>
+                                                <td className='grid grid-cols-1'>
+                                                    <p >
+                                                        {user?.role === 'admin' ? 'Admin' :
+                                                            <button className='text-white bg-orange-600 rounded-md px-2' onClick={() => handleMakeAdmin(user)}>
+                                                                Make Admin
+                                                                <ToastContainer />
+                                                            </button>
+                                                        }
+                                                    </p>
+                                                    <p>
+                                                        {user?.role === 'instructor' ? 'Instructor' :
+                                                            <button className='text-white bg-orange-600 rounded-md px-2' onClick={() => handleMakeInstructor(user)}>
+                                                                Make Instructor
+                                                                <ToastContainer />
+                                                            </button>
+
+                                                        }
+                                                    </p>
+                                                </td>
                                                 <td>
                                                     <button onClick={() => handleDelete(user)}>
                                                         <FaTrashAlt className='h-5 text-red-700'></FaTrashAlt>
