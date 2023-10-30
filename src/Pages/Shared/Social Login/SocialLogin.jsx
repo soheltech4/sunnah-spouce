@@ -58,10 +58,6 @@ const SocialLogin = ({title}) => {
                     <a><FaGoogle /></a>
                     <ToastContainer></ToastContainer>
                 </button>
-                <button className='text-center w-full mt-5 justify-center shadow-lg input flex items-center gap-5 '>
-                    <h1>Sign {title} with Github </h1>
-                    <a><FaGithub /></a>
-                </button>
             </div>
         </div>
     );
