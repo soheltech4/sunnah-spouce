@@ -52,7 +52,7 @@ const Login = () => {
     };
 
     return (
-        <div className="md:flex bg-purple-50 pb-20 w-full justify-center items-center pt-20 ">
+        <div className="md:flex pb-20 w-full justify-center items-center pt-20 ">
             <div className="m-10 p-5 md:w-1/4 rounded-lg">
                 <div>
                     <SocialLogin title="in"></SocialLogin>

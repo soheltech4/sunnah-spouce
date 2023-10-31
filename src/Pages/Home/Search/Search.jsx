@@ -2,7 +2,7 @@ import React from 'react';
 
 const Search = () => {
     return (
-        <div className='relative top-5 m-10 gap-5 text-black md:flex justify-between items-center border rounded-lg bg-white bg-opacity-80 md:px-20 px-10 md:py-14 py-5'>
+        <div className='relative top-5 md:mx-52 m-10 gap-5 text-black md:flex justify-between items-center border rounded-lg bg-white bg-opacity-80 md:px-20 px-10 md:py-14 py-5'>
             <div className="form-control w-full max-w-xs">
                 <label className="label">
                     <span className="label-text text-lg font-semibold">Looking for</span>
