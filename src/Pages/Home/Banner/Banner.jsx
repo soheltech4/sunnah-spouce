@@ -4,7 +4,7 @@ import Search from '../Search/Search';
 const Banner = () => {
     return (
         <div className='text-center'>
-            <img className='absolute opacity-20' src="https://i.ibb.co/bsd1gx2/Banner.png" alt="" />
+            <img className='absolute opacity-60' src="https://i.ibb.co/bsd1gx2/Banner.png" alt="" />
             <div className='grid justify-center relative top-0 md:top-10 p-5 items-center'>
                 <h1 className='md:text-7xl text-center text-4xl font-bold'>Bangladesh Islamic <br /> <span className='text-rose-600'>Matrimony</span></h1>
                 <h1 className='text-2xl pt-10'>It is now easy to find a religious life partner in your own district</h1>
