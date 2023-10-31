@@ -1,12 +1,14 @@
 import React from 'react';
-import Search from './Search/Search';
 import Banner from './Banner/Banner';
+import CreateBiodata from './Create Biodata/CreateBiodata';
+import Statistics from './Statistics/Statistics';
 
 const Home = () => {
     return (
         <div className='pt-24'>
             <Banner></Banner>
-            <Search></Search>
+            <CreateBiodata></CreateBiodata>
+            <Statistics></Statistics>
         </div>
     );
 };

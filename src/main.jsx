@@ -18,7 +18,7 @@ const queryClient = new QueryClient()
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <div className='bg-gradient-to-r from-indigo-100 via-purple-100 to-pink-100'>
+    <div className='bg-gradient-to-r from-indigo-200 via-purple-200 to-pink-200'>
       <AuthProvider>
         <QueryClientProvider client={queryClient}>
           <RouterProvider router={router} />
