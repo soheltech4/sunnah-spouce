@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { FaSistrix, FaUser, FaUserCircle } from "react-icons/fa";
+import { FaUserCircle } from "react-icons/fa";
 import { AuthContext } from '../../../Provider/AuthProvider';
 
 const Navbar = () => {
