@@ -13,10 +13,16 @@ const Biodata = () => {
 
     return (
         <div className='flex flex-row-reverse mt-5'>
-            <div className='grid md:grid-cols-3 gap-x-5 gap-y-5'>
-                {
-                    users.map(user => <ShowBiodata user={user}></ShowBiodata>)
-                }
+            <div>
+                <div>
+                    <p className='text-center text-2xl font-bold uppercase'>Biodatas</p>
+                    <h1 className='text-center text-2xl mb-5'>{users.length}</h1>
+                </div>
+                <div className='grid md:grid-cols-3 gap-x-5 gap-y-5'>
+                    {
+                        users.map(user => <ShowBiodata user={user}></ShowBiodata>)
+                    }
+                </div>
             </div>
             <div className="drawer w-1/5 lg:drawer-open">
                 <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
