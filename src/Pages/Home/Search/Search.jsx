@@ -39,6 +39,9 @@ const Search = () => {
     }, [])
 
 
+
+
+
     return (
         <div className='relative shadow-md hover:shadow-lg top-5 md:mx-52 m-10 gap-5 text-black md:flex justify-between items-center border rounded-lg bg-white bg-opacity-80 md:px-20 px-10 md:py-14 py-5'>
             <div className="form-control w-full max-w-xs">
@@ -47,7 +50,7 @@ const Search = () => {
                 </label>
                 <select className="select select-bordered w-full">
                     <option selected>All</option>
-                    {Genders.map(gender => <option>{gender} Biodata</option>)}
+                    {Genders.map((gender, indexOf) => <option key={indexOf}>{gender} Biodata</option>)}
                 </select>
             </div>
             <div className="form-control w-full max-w-xs">
@@ -56,7 +59,7 @@ const Search = () => {
                 </label>
                 <select className="select select-bordered w-full">
                     <option selected>All</option>
-                    {Marital.map(marital => <option>{marital}</option> )}
+                    {Marital.map((marital, indexOf) => <option key={indexOf}>{marital}</option> )}
                 </select>
             </div>
             <div className="form-control w-full max-w-xs">
@@ -65,7 +68,7 @@ const Search = () => {
                 </label>
                 <select className="select select-bordered w-full">
                     <option selected>All</option>
-                    {District.map(district => <option>{district}</option>)}
+                    {District.map((district, indexOf) => <option key={indexOf}>{district}</option>)}
                 </select>
             </div>
             <div className="form-control w-full max-w-xs md:mt-6">
