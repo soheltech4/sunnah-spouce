@@ -2,7 +2,7 @@ import React from 'react';
 
 const CreateBiodata = () => {
     return (
-        <div className='md:mt-96 mt-72 mb-80 grid grid-cols-1 items-center justify-center'>
+        <div className='md:mt-80 mt-36 md:mb-80 mb-36 grid grid-cols-1 items-center justify-center'>
             <h1 className='md:text-5xl text-3xl font-bold text-center px-5'><span className='text-rose-600'>Create Biodata</span> in Our Website completely free of cost</h1>
             <div className='flex gap-2 justify-center items-center'>
                 <a href="#_" class="mt-16 relative inline-flex items-center justify-center p-4 px-5 py-3 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out rounded-full shadow-xl group hover:ring-1 hover:ring-purple-500">
