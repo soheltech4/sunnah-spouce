@@ -1,0 +1,70 @@
+[
+ {
+      "gender": "Male",
+      "name": "Abid Hossain",
+      "date_of_birth": "1990",
+      "education": "General",
+      "permanent_address": {
+        "Police_station" : "Melandah",
+        "District" : "Jamalpur",
+        "Country" : "Bangladesh"
+      },
+      "present_address": "Gulshan, Dhaka, Bangladesh",
+      "complexion": "Brown",
+      "blood_group": "O+",
+      "marital_status": "Unmarried",
+      "weight": 75,
+      "contact": "01776462919"
+  },
+ {
+      "gender": "Female",
+      "name": "Khadija Akter",
+      "date_of_birth": "2000",
+      "education": "Qawmi",
+      "permanent_address": {
+        "Police_station" : "",
+        "District" : "Sirajganj",
+        "Country" : "Bangladesh"
+      },
+      "present_address": "Gulshan, Dhaka, Bangladesh",
+      "complexion": "White",
+      "blood_group": "A+",
+      "marital_status": "Divorced",
+      "weight": 65,
+      "contact": "01776465519"
+  },
+ {
+      "gender": "Male",
+      "name": "Hossain Emran",
+      "date_of_birth": "1996",
+      "education": "General",
+      "permanent_address": {
+        "Police_station" : "Trishal",
+        "District" : "Mymensingh",
+        "Country" : "Bangladesh"
+      },
+      "present_address": "Vatara, Dhaka, Bangladesh",
+      "complexion": "Brown",
+      "blood_group": "AB+",
+      "marital_status": "Married",
+      "weight": 55,
+      "contact": "01776469919"
+  },
+ {
+      "gender": "Female",
+      "name": "Aysha Akter",
+      "date_of_birth": "1997",
+      "education": "General",
+      "permanent_address": {
+        "Police_station" : "Melandah",
+        "District" : "Jamalpur",
+        "Country" : "Bangladesh"
+      },
+      "present_address": "Gulshan, Dhaka, Bangladesh",
+      "complexion": "Brown",
+      "blood_group": "O+",
+      "marital_status": "Unmarried",
+      "weight": 85,
+      "contact": "01776462919"
+  }
+]

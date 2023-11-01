@@ -1,6 +1,44 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 const Search = () => {
+    const [Genders, setGenders] = useState([])
+    const [Marital, setMarital] = useState([])
+    const [District, setDistrict] = useState([])
+
+    useEffect(() => {
+        fetch('users.json')
+            .then(res => res.json())
+            .then(data => {
+                const uniqueGenders = Array.from(
+                    new Set(data.map((gender) => gender.gender))
+                );
+                setGenders(uniqueGenders);
+            })
+    }, [])
+
+    useEffect(() => {
+        fetch('users.json')
+            .then(res => res.json())
+            .then(data => {
+                const uniqueMarital = Array.from(
+                    new Set(data.map((marital) => marital.marital_status))
+                );
+                setMarital(uniqueMarital);
+            })
+    }, [])
+
+    useEffect(() => {
+        fetch('users.json')
+            .then(res => res.json())
+            .then(data => {
+                const uniqueDistrict = Array.from(
+                    new Set(data.map((district) => district?.permanent_address?.District))
+                );
+                setDistrict(uniqueDistrict);
+            })
+    }, [])
+
+
     return (
         <div className='relative shadow-md hover:shadow-lg top-5 md:mx-52 m-10 gap-5 text-black md:flex justify-between items-center border rounded-lg bg-white bg-opacity-80 md:px-20 px-10 md:py-14 py-5'>
             <div className="form-control w-full max-w-xs">
@@ -9,8 +47,7 @@ const Search = () => {
                 </label>
                 <select className="select select-bordered w-full">
                     <option selected>All</option>
-                    <option>Male Biodata</option>
-                    <option>Female Biodata</option>
+                    {Genders.map(gender => <option>{gender} Biodata</option>)}
                 </select>
             </div>
             <div className="form-control w-full max-w-xs">
@@ -19,10 +56,7 @@ const Search = () => {
                 </label>
                 <select className="select select-bordered w-full">
                     <option selected>All</option>
-                    <option>Unmarried</option>
-                    <option>Married</option>
-                    <option>Divorced</option>
-                    <option>Widow</option>
+                    {Marital.map(marital => <option>{marital}</option> )}
                 </select>
             </div>
             <div className="form-control w-full max-w-xs">
@@ -31,10 +65,7 @@ const Search = () => {
                 </label>
                 <select className="select select-bordered w-full">
                     <option selected>All</option>
-                    <option>Dhaka</option>
-                    <option>Tangail</option>
-                    <option>Chittagong</option>
-                    <option>Jamalpur</option>
+                    {District.map(district => <option>{district}</option>)}
                 </select>
             </div>
             <div className="form-control w-full max-w-xs md:mt-6">
