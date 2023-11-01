@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Search = () => {
     const [Genders, setGenders] = useState([])
@@ -51,9 +52,9 @@ const Search = () => {
         setDistrictChange(event.target.value);
     };
 
-const handleSearch = () => {
-    console.log(GenderChange, MaritalChange, DistrictChange)
-}
+    const handleSearch = (GenderChange, MaritalChange, DistrictChange) => {
+        console.log(GenderChange, MaritalChange, DistrictChange)
+    }
 
     return (
         <div className='relative shadow-md hover:shadow-lg top-5 md:mx-52 m-10 gap-5 text-black md:flex justify-between items-center border rounded-lg bg-white bg-opacity-80 md:px-20 px-10 md:py-14 py-5'>
@@ -72,7 +73,7 @@ const handleSearch = () => {
                 </label>
                 <select onChange={handleMartialChange} className="select select-bordered w-full">
                     <option selected>All</option>
-                    {Marital.map((marital, indexOf) => <option key={indexOf}>{marital}</option> )}
+                    {Marital.map((marital, indexOf) => <option key={indexOf}>{marital}</option>)}
                 </select>
             </div>
             <div className="form-control w-full max-w-xs">
@@ -88,7 +89,9 @@ const handleSearch = () => {
                 <label className="label">
                     <span className="label-text text-lg font-semibold"></span>
                 </label>
-                <button onClick={handleSearch} className='btn btn-primary w-full'>SEARCH</button>
+                <Link to="/biodata">
+                    <button onClick={() => handleSearch(GenderChange, MaritalChange, DistrictChange)} className='btn btn-primary w-full'>SEARCH</button>
+                </Link>
             </div>
         </div>
     );

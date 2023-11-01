@@ -5,6 +5,7 @@ import Main from "../Layouts/Main";
 import Home from "../Pages/Home/Home";
 import Login from "../Pages/Shared/Login/Login";
 import SignUp from "../Pages/Shared/Sign Up/SignUp";
+import Biodata from "../Pages/Biodata/Biodata";
 
 export const router = createBrowserRouter([
   {
@@ -22,6 +23,10 @@ export const router = createBrowserRouter([
       {
         path: "/signup",
         element: <SignUp></SignUp>
+      },
+      {
+        path: "/biodata",
+        element: <Biodata></Biodata>
       }
     ]
   }
