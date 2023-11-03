@@ -4,7 +4,7 @@ import ShowBiodata from './ShowBiodata';
 const Biodata = () => {
     const [users, setUsers] = useState([])
     useEffect(() => {
-        fetch('users.json')
+        fetch('http://localhost:5000/users')
             .then(res => res.json())
             .then(data => setUsers(data))
     }, [])
@@ -18,7 +18,7 @@ const Biodata = () => {
                     <p className='text-center text-2xl font-bold uppercase'>Biodatas</p>
                     <h1 className='text-center text-2xl mb-5'>{users.length}</h1>
                 </div>
-                <div className='grid md:grid-cols-3 gap-x-5 gap-y-5'>
+                <div className='grid md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-8'>
                     {
                         users.map(user => <ShowBiodata user={user}></ShowBiodata>)
                     }

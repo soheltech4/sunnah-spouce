@@ -1,12 +1,28 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../Provider/AuthProvider';
+import ShowMyDetails from './ShowMyDetails';
 
 const Myprfile = () => {
     const {user} = useContext(AuthContext)
+    const [users, setUsers] = useState([])
+
+
+    useEffect(() => {
+        fetch('http://localhost:5000/users')
+            .then(res => res.json())
+            .then(data => {
+                const filterData = data.filter(d => d.email === user.email)
+                setUsers(filterData)
+            })
+    }, [])
+
+    console.log(users)
 
     return (
         <div>
-            <p>{user?.displayName}</p>
+            {users.map(user=><ShowMyDetails key={user?._id} user={user}></ShowMyDetails>)
+
+            }
         </div>
     );
 };

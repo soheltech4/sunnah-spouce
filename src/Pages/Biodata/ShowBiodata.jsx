@@ -49,7 +49,7 @@ const ShowBiodata = ({ user }) => {
                         </thead>
                         <tbody>
                             <tr>
-                                <td className='text-lg text-center border-b-0 text-black border border-l-0 border-black'>{date_of_birth}</td>
+                                <td className='text-lg text-center border-b-0 text-black border border-l-0 border-black'>{date_of_birth.slice(0,4)}</td>
                                 <td className='text-lg text-center border-b-0 text-black border border-l-0 border-black'>{height}</td>
                                 <td className='text-lg text-center border-b-0 text-black border border-r-0 border-black'>{complexion}</td>
                             </tr>
