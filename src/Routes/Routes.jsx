@@ -10,6 +10,7 @@ import PrivateRoutes from "./PrivateRoutes";
 import Dashboard from "../Layouts/Dashboard";
 import Myprfile from "../Pages/Dashboard/Myprfile";
 import Editbiodata from "../Pages/Dashboard/Editbiodata";
+import UserDetails from "../Pages/Biodata/UserDetails";
 
 export const router = createBrowserRouter([
   {
@@ -31,6 +32,11 @@ export const router = createBrowserRouter([
       {
         path: "/biodata",
         element: <Biodata></Biodata>
+      },
+      {
+        path: "/users/:_id",
+        element: <UserDetails></UserDetails>,
+        loader: ({params}) => fetch(`https://sunnahspouse-server.up.railway.app/users/${params._id}`)
       },
       {
         path: "/dashboard",

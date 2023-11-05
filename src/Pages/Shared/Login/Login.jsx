@@ -23,7 +23,7 @@ const Login = () => {
                 const user = result.user;
                 console.log(user);
                 const saveUser = {email, password}
-                fetch('http://localhost:5000/users', {
+                fetch('https://sunnahspouse-server.up.railway.app/users', {
                     method : 'POST',
                     headers : {
                         'content-type' : 'application/json'

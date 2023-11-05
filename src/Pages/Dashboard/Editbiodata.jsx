@@ -1,6 +1,5 @@
 import React, { useContext, useState } from 'react';
 import { AuthContext } from '../../Provider/AuthProvider';
-import { Tab, TabList, TabPanel, Tabs } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import { ToastContainer, toast } from 'react-toastify';
 import { useEffect } from 'react';
@@ -28,7 +27,7 @@ const Editbiodata = () => {
         const present_address = form.present_address.value
         const newUser = { name, permanent_address, present_address, email, gender, date_of_birth, height, complexion, blood_group, nationality, marital_status }
         console.log(newUser)
-        fetch('http://localhost:5000/users', {
+        fetch('https://sunnahspouse-server.up.railway.app/users', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -53,7 +52,7 @@ const Editbiodata = () => {
     };
 
     useEffect(() => {
-        fetch('http://localhost:5000/users')
+        fetch('https://sunnahspouse-server.up.railway.app/users')
             .then(res => res.json())
             .then(data => {
                 const filterData = data.filter(d => d.email === user.email)
@@ -65,14 +64,14 @@ const Editbiodata = () => {
 
     return (
         <form onSubmit={handleSubmit}>
-            <div className="w-full justify-center p-5 mt-0">
+            <div className="w-full justify-center md:p-5 mt-0">
                 <div className='bg-gray-500 bg-opacity-25 p-5 md:p-5 rounded-lg w-full'>
                     <h1 className='text-3xl text-center pb-5'>General Info</h1>
                     <div >
                         <div className='grid md:grid-cols-3 gap-5'>
                             <div className="form-control w-full ">
                                 <p className='pl-1'>Your Name</p>
-                                <input type="text" name='name' defaultValue={user?.displayName} placeholder="Your Name" required className="input input-bordered w-full " />
+                                <input type="text" name='name' defaultValue={user?.displayName} placeholder="Your Name" className="input input-bordered w-full " />
                             </div>
                             <div className="form-control w-full ">
                                 <p className='pl-1'>Your Email</p>
@@ -142,7 +141,7 @@ const Editbiodata = () => {
                     </div>
                 </div>
             </div>
-            <div className='p-5'>
+            <div className='md:p-5 w-full'>
                 <div className='bg-gray-500 bg-opacity-25 p-5 md:p-5 rounded-lg w-full'>
                     <h1 className='text-3xl text-center pb-5'>Address</h1>
                     <div >
@@ -160,9 +159,9 @@ const Editbiodata = () => {
                         </div>
                     </div>
                 </div>
-                <input type="submit" value="Submit" />
-            <ToastContainer />
-            </div> 
+                <input type="submit" value='Save Data' class="relative text-white w-full mt-5 inline-flex items-center justify-center bg-gradient-to-br from-blue-600 via-purple-600 to-pink-700 p-4 px-5 py-3 overflow-hidden font-medium  transition duration-300 ease-out rounded-full shadow-xl group hover:ring-1 hover:ring-purple-500"/>
+                <ToastContainer />
+            </div>
         </form>
     );
 };

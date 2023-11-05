@@ -10,7 +10,7 @@ const Search = () => {
     const [DistrictChange, setDistrictChange] = useState("All")
 
     useEffect(() => {
-        fetch('http://localhost:5000/users')
+        fetch('https://sunnahspouse-server.up.railway.app/users')
             .then(res => res.json())
             .then(data => {
                 const uniqueGenders = Array.from(
@@ -21,7 +21,7 @@ const Search = () => {
     }, [])
 
     useEffect(() => {
-        fetch('http://localhost:5000/users')
+        fetch('https://sunnahspouse-server.up.railway.app/users')
             .then(res => res.json())
             .then(data => {
                 const uniqueMarital = Array.from(
@@ -32,7 +32,7 @@ const Search = () => {
     }, [])
 
     useEffect(() => {
-        fetch('http://localhost:5000/users')
+        fetch('https://sunnahspouse-server.up.railway.app/users')
             .then(res => res.json())
             .then(data => {
                 const uniqueDistrict = Array.from(

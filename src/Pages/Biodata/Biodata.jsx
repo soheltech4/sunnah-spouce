@@ -4,7 +4,7 @@ import ShowBiodata from './ShowBiodata';
 const Biodata = () => {
     const [users, setUsers] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/users')
+        fetch('https://sunnahspouse-server.up.railway.app/users')
             .then(res => res.json())
             .then(data => setUsers(data))
     }, [])
@@ -35,7 +35,7 @@ const Biodata = () => {
                     <label htmlFor="my-drawer-2" aria-label="close sidebar" className="drawer-overlay"></label>
                     <ul className="menu text-lg min-h-full bg-purple-200 text-base-content">
                         <div className='p-5 pl-10 grid grid-cols-2 justify-between items-center'>
-                            <p className='uppercase font-bold text-2xl'>Hello</p>
+                            <p className='uppercase font-bold text-2xl'></p>
                         </div>
                     </ul>
                 </div>

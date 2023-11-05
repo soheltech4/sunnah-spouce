@@ -1,25 +1,8 @@
 import React from 'react';
-
-// "gender": "Male",
-// "name": "Abid Hossain",
-// "date_of_birth": "1990",
-// "education": "General",
-// "permanent_address": {
-//   "Police_station" : "Melandah",
-//   "District" : "Jamalpur",
-//   "Country" : "Bangladesh"
-// },
-// "present_address": "Gulshan, Dhaka, Bangladesh",
-// "complexion": "Brown",
-// "blood_group": "O+",
-// "marital_status": "Unmarried",
-// "weight": 75,
-// "contact": "01776462919"
-
-
+import { Link } from 'react-router-dom';
 
 const ShowBiodata = ({ user }) => {
-    const { gender, name, date_of_birth, education, permanent_address, present_address, complexion, height, blood_group, marital_status, weight, contact, indexOf } = user
+    const { _id, gender, name, date_of_birth, education, permanent_address, present_address, complexion, height, blood_group, marital_status, weight, contact, indexOf } = user
     return (
         <div>
             <div className="card w-[340px] glass shadow-md hover:shadow-xl">
@@ -56,11 +39,13 @@ const ShowBiodata = ({ user }) => {
                         </tbody>
                     </table>
                     <div className="card-actions justify-center mt-5 ">
-                        <a href="#_" class="relative inline-flex items-center justify-center p-4 px-5 py-3 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out rounded-full shadow-xl group hover:ring-1 hover:ring-purple-500">
+                        <Link to={`/users/${_id}`}>
+                        <button class="relative inline-flex items-center justify-center p-4 px-5 py-3 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out rounded-full shadow-xl group hover:ring-1 hover:ring-purple-500">
                             <span class="absolute inset-0 w-full h-full bg-gradient-to-br from-blue-600 via-purple-600 to-pink-700"></span>
                             <span class="absolute bottom-0 right-0 block w-64 h-64 mb-32 mr-4 transition duration-500 origin-bottom-left transform rotate-45 translate-x-24 bg-pink-500 rounded-full opacity-30 group-hover:rotate-90 ease"></span>
                             <span class="relative text-white ">Full Biodata</span>
-                        </a>
+                        </button>
+                        </Link>
                     </div>
                 </div>
             </div>

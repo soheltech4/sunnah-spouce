@@ -20,7 +20,7 @@ const SocialLogin = ({title}) => {
             console.log(loggeduser)
 
             const saveUser = {email: loggeduser.email, name: loggeduser.displayName}
-            fetch('http://localhost:5000/users', {
+            fetch('https://sunnahspouse-server.up.railway.app/users', {
                 method : 'POST',
                 headers : {
                     'content-type' : 'application/json'
