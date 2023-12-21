@@ -36,7 +36,7 @@ export const router = createBrowserRouter([
       {
         path: "/users/:_id",
         element: <UserDetails></UserDetails>,
-        loader: ({params}) => fetch(`https://sunnahspouse-server.up.railway.app/users/${params._id}`)
+        loader: ({params}) => fetch(`https://sunnahspouse-server.vercel.app/users/${params._id}`)
       },
       {
         path: "/dashboard",

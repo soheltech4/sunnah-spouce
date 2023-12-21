@@ -27,7 +27,7 @@ const Editbiodata = () => {
         const present_address = form.present_address.value
         const newUser = { name, permanent_address, present_address, email, gender, date_of_birth, height, complexion, blood_group, nationality, marital_status }
         console.log(newUser)
-        fetch('https://sunnahspouse-server.up.railway.app/users', {
+        fetch('https://sunnahspouse-server.vercel.app/users', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -52,7 +52,7 @@ const Editbiodata = () => {
     };
 
     useEffect(() => {
-        fetch('https://sunnahspouse-server.up.railway.app/users')
+        fetch('https://sunnahspouse-server.vercel.app/users')
             .then(res => res.json())
             .then(data => {
                 const filterData = data.filter(d => d.email === user.email)

@@ -23,7 +23,7 @@ const Login = () => {
                 const user = result.user;
                 console.log(user);
                 const saveUser = {email, password}
-                fetch('https://sunnahspouse-server.up.railway.app/users', {
+                fetch('https://sunnahspouse-server.vercel.app/users', {
                     method : 'POST',
                     headers : {
                         'content-type' : 'application/json'

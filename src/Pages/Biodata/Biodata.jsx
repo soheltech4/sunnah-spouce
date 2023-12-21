@@ -4,7 +4,7 @@ import ShowBiodata from './ShowBiodata';
 const Biodata = () => {
     const [users, setUsers] = useState([])
     useEffect(() => {
-        fetch('https://sunnahspouse-server.up.railway.app/users')
+        fetch('https://sunnahspouse-server.vercel.app/users')
             .then(res => res.json())
             .then(data => setUsers(data))
     }, [])

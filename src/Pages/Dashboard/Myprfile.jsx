@@ -8,7 +8,7 @@ const Myprfile = () => {
 
 
     useEffect(() => {
-        fetch('https://sunnahspouse-server.up.railway.app/users')
+        fetch('https://sunnahspouse-server.vercel.app/users')
             .then(res => res.json())
             .then(data => {
                 const filterData = data.filter(d => d.email === user.email)

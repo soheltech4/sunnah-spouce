@@ -47,7 +47,7 @@ const SignUp = () => {
                 console.log(loggedUser)
 
                 const seveUser = {name, email }
-                fetch('https://sunnahspouse-server.up.railway.app/users', {
+                fetch('https://sunnahspouse-server.vercel.app/users', {
                     method: "POST",
                     headers: {
                         'content-type': 'application/json'

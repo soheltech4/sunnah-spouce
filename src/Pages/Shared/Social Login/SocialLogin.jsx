@@ -20,7 +20,7 @@ const SocialLogin = ({title}) => {
             console.log(loggeduser)
 
             const saveUser = {email: loggeduser.email, name: loggeduser.displayName}
-            fetch('https://sunnahspouse-server.up.railway.app/users', {
+            fetch('https://sunnahspouse-server.vercel.app/users', {
                 method : 'POST',
                 headers : {
                     'content-type' : 'application/json'
